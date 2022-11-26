@@ -1,21 +1,23 @@
+
 function exampleThree() {
+ 
+    async function wait (){
+        await sleep(500)
+            doWork()
+            await sleep(500)
+            doWork()
+    }
 
     function one() {
         doWork()
     }
 
     async function two() {
-        await sleep(500)
-        doWork()
-        await sleep(500)
-        doWork()
+        wait()
     }
 
     async function three() {
-        await sleep(500)
-        doWork()
-        await sleep(500)
-        doWork()
+        wait()
     }
 
     one()
